@@ -9,9 +9,9 @@ The framework is built with TypeScript and Cucumber, following Behavior-Driven D
 
 #Install Pre-Requisite Softwares#
 
-Node.js - The framework requires Node.js version v22.17.0 and above
-VS Code - Preferred IDE V1.101.2
-Git     - for Cloning Project/Version Control
+Node.js - The framework requires Node.js version v22.17.0 and above.
+VS Code - Preferred IDE V1.101.2.
+Git     - for Cloning Project/Version Control.
 
  Setup procedure in Local Machine:
  -------------------------------------

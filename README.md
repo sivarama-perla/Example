@@ -1,16 +1,20 @@
 Playwright Testing Framework (Tpescript + Cucumber)
 ----------------------------------------------------
 #What is it?#
+-------------------
 This is an automated testing framework built with Playwright and TypeScript, designed to support both API and UI testing.
 
 #Approach#
+---------------
 The framework is built with TypeScript and Cucumber, following Behavior-Driven Development (BDD) principles using the Gherkin syntax. It applies the Page Object Model (POM) design pattern with shared and reusable methods.
 
 
 #Install Pre-Requisite Softwares#
-
+--------------------------------------
 Node.js - The framework requires Node.js version v22.17.0 and above.
+
 VS Code - Preferred IDE V1.101.2.
+
 Git     - for Cloning Project/Version Control.
 
  Setup procedure in Local Machine:

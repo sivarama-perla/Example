@@ -8,6 +8,8 @@ This is an automated testing framework built with Playwright and TypeScript, des
 ---------------
 The framework is built with TypeScript and Cucumber, following Behavior-Driven Development (BDD) principles using the Gherkin syntax. It applies the Page Object Model (POM) design pattern with shared and reusable methods.
 
+![image](https://github.com/user-attachments/assets/b17e0f48-8c42-48c9-bdf9-cbaa3a1d1e63)
+
 
 #Install Pre-Requisite Softwares#
 --------------------------------------

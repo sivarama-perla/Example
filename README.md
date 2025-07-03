@@ -1,78 +1,52 @@
-Playwright Testing Framework for UI + API (Tpescript + Cucumber)
-------------------------------------------------------------------
-What is it?
-This is an automated testing framework built with Playwright and TypeScript, designed to support both API and UI testing.
-
-Approach
-The framework is built with TypeScript and Cucumber, following Behavior-Driven Development (BDD) principles using the Gherkin syntax. It applies the Page Object Model (POM) design pattern with shared and reusable methods.
-
-
-Pre-Requisite Softwares
-
-Node.js - The framework requires Node.js version v22.17.0 and above.
-VS Code - Preferred IDE V1.101.2.
-Git     - for Cloning Project/Version Control.
-
- Project Setup procedure in Local Machine:
- -------------------------------------
-
- Step 1: Check the pre requisite softwares in your local machine and install if anything is missing from the list.
-
- Step 2: Clone the project to your local system.
-
- Step 3: Open the project with IDE.
-
- Step 4: Install node module dependencies using npm install and npx playwright.
-
-Execution of Test Cases:
+Implemented Scenarios
 ----------------------------
+UI Test: (Sauce Demo)
+-> Positive: Successfull login and validation of product inventory page
+-> Negative: Unsuccessfull login and valdiation of Error Message
 
-To execute tests use the command -> npm run test
+API Test: (Swagger Petstore)
+-> Positive: Get a Pet details with valid Pet ID
+-> Negative: Attempt to get a non-existent pet by invalid ID
 
-Reports:
----------------
+UI & API Scenarios for Future Automation
+-------------------------------------------
 
-Once the execution completed HTML-Cucumber Report will be generated automatically under .\src\test-result\reports along with screenshots in Screenshot folder.
+Test Scenarios for Swagger Petstore API
+------------------------------------------
+Test case priority	Scenario	                        Layer	        Type	            Positive	   Negative	    Reasoning
+1	                Login (valid/invalid/locked user)	UI & API	    Functional	        Yes	            Yes	        Core flow, first touchpoint
+2	                Add to Cart / Remove from Cart	    UI	            Functional	        Yes	            Yes	        Revenue critical
+3	                Checkout Flow	                    UI	            E2E	                Yes	            Yes	        Requires sequential interaction
+4	                Product Sorting	                    UI	            Visual & Functional	Yes	            Yes	        Enhances UX
+5	                Session Timeout Handling	        API	            Security	        Yes	            Yes	        Important for security testing
+6	                API Rate Limiting	                API	            Performance	        Yes	            Yes	        Prevent abuse
+7	                Field Validation (Login, Checkout)	UI	            Input Validation	Yes	            Yes	        Prevents user errors
 
 
-File Structure and it's purpose:
--------------------------------------
-src -> Library which contains feature files, Page objects, step definitons, utilities.
-
-test-result -> Output library for screenshots and html-cucumber reports post run of test cases.
-
-tsconfig.json -> It configures how TypeScript compiles and code, ensuring project runs smoothly with TypeScrip.
-
-cucumber.json file -> This is Cucumber config file. Using this cucumber finds feature files, step definitions, what modules to load, how to format reports, and other runtime options.
-
-package.json file -> Manages project dependencies, scripts and metadata which is essential for installing, running framework.
-
-package-lock.json -> Works together with package.json to manage project dependencies reliably. 
-
-Key Files:
------------
-pageObjects: A .ts file has been created for both UI (saucedemo) and API (petstore). Within the file it holds a central repository for all the web elements and methods.
-Location: .\src\test\pageObjects
-
-feaures: A .feature file has been created for both UI and API tests as per BDD Gherkin format
-Location: .\src\test\features\api -> for api feature file,
-          .\src\test\features\ui -> for ui feature file
-
-steps: This contains step definition files which are glue between Gherkin feature files and actual test code.
-Location: .\src\test\steps
-
-utilities: It contains shared helper functions or modules to reuse across tests, step definitions, page objects. (DRY Principle)
-Location: .\src\test\utilities
-
-reports: Once the test execution completes a html-cucumber report will be generates within this folder.
-Location: .\src\test-result\reports
-
-screenshot: To take screenshots once the test case execution completes and stores here.
-Location: .\src\test-result\screenshots
+Test Scenarios for Swagger Petstore API
+------------------------------------------
+Test case priority	Scenario	                                    Layer	        Type	            Positive	Negative	Reasoning
+1	                Add New Pet (valid/invalid data)	            API	            Functional	        Yes	        Yes	        Core flow for pet management
+2	                Get Pet by ID (existing/nonexistent)	        API	            Functional	        Yes	        Yes	        Verify data retrieval & proper errorhandling
+3	                Update Pet Info	                                API	            Functional	        Yes	        Yes	        Core for modifying existing resources
+4	                Delete Pet (existing/nonexistent)	            API	            Functional	        Yes	        Yes	        Ensure proper cleanup and error handling
+5	                Upload Pet Image	                            API & UI	    Functional	        Yes	        Yes	        Multimedia handling, UX enhancement
+6	                Find Pets by Status (available/pending/sold)	API	            Functional	        Yes	        Yes	        Filters and query param validation
+7	                User Login/Logout	                            UI & API	    Security	        Yes	        Yes	        Authentication flows, prevent unauthorized access
+8	                Input Field Validation (Pet, User data)	        UI & API	    Input Validation	Yes	        Yes	        Prevent invalid data, avoid server errors
+9	                Rate Limiting	                                API	            Performance	        Yes	        Yes	        Protect backend from abuse
+10	                Session Management	                            UI & API	    Security	        Yes	        Yes	        Session expiry, token refresh
+11	                UI Navigation & Responsiveness	                UI	            Visual & Functional	Yes	        Yes	        Usability, cross-device compatibility
 
 
 
 
-See `test-explanation.md` for test design and reasoning.
+Additional High-Value Tests we can plan and integrate with Playwright
+-----------------------------------------------------------------------
+Cross-browser Testing (Safari, Firefox, Edge)
+Responsive Design (Mobile vs Desktop)
+Accessibility Audit (a11y) using Axe-core/Pa11y
+Visual Regression Tests (using Playwright snapshots)
+Performace Benchmarks (Lighthouse CI)
+Security Scans (ZAP for OWASP tesing)
 
-Author: Sivaramakrishna Perla

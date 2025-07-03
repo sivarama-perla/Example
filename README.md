@@ -50,3 +50,5 @@ Visual Regression Tests (using Playwright snapshots)
 Performace Benchmarks (Lighthouse CI)
 Security Scans (ZAP for OWASP tesing)
 
+![image](https://github.com/user-attachments/assets/2f43e08f-e939-4d7c-aeca-6c97b19ef104)
+

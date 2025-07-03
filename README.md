@@ -1,25 +1,19 @@
-Playwright Testing Framework (Tpescript + Cucumber)
-----------------------------------------------------
-#What is it?#
--------------------
+Playwright Testing Framework for UI + API (Tpescript + Cucumber)
+------------------------------------------------------------------
+What is it?
 This is an automated testing framework built with Playwright and TypeScript, designed to support both API and UI testing.
 
-#Approach#
----------------
+Approach
 The framework is built with TypeScript and Cucumber, following Behavior-Driven Development (BDD) principles using the Gherkin syntax. It applies the Page Object Model (POM) design pattern with shared and reusable methods.
 
-![image](https://github.com/user-attachments/assets/b17e0f48-8c42-48c9-bdf9-cbaa3a1d1e63)
 
+Pre-Requisite Softwares
 
-#Install Pre-Requisite Softwares#
---------------------------------------
 Node.js - The framework requires Node.js version v22.17.0 and above.
-
 VS Code - Preferred IDE V1.101.2.
-
 Git     - for Cloning Project/Version Control.
 
- Setup procedure in Local Machine:
+ Project Setup procedure in Local Machine:
  -------------------------------------
 
  Step 1: Check the pre requisite softwares in your local machine and install if anything is missing from the list.
@@ -30,7 +24,15 @@ Git     - for Cloning Project/Version Control.
 
  Step 4: Install node module dependencies using npm install and npx playwright.
 
- Step 5: To execute tests use the command -> npm run test
+Execution of Test Cases:
+----------------------------
+
+To execute tests use the command -> npm run test
+
+Reports:
+---------------
+
+Once the execution completed HTML-Cucumber Report will be generated automatically under .\src\test-result\reports along with screenshots in Screenshot folder.
 
 
 File Structure and it's purpose:
